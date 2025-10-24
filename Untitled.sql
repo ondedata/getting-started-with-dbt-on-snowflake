@@ -1,0 +1,1 @@
+execute dbt project from workspace "USER$"."PUBLIC"."DBT_DEMO" project_root='tasty_bytes_dbt_demo' args='deps --target dev' external_access_integrations = (dbt_ext_access)

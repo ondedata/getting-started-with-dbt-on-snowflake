@@ -5,15 +5,15 @@ tasty_bytes:
       type: snowflake
       account: 'not needed'
       user: 'not needed'
-      role: accountadmin
-      database: tasty_bytes_dbt_db
-      schema: dev
-      warehouse: tasty_bytes_dbt_wh
+      role: 'RF_BENCHMARK_TESTEUR'
+      database: 'DBT_DB'
+      schema: 'DEMO_DEV'
+      warehouse: 'DEFAULT_WH'
     prod:
       type: snowflake
       account: 'not needed'
       user: 'not needed'
-      role: accountadmin
-      database: tasty_bytes_dbt_db
-      schema: prod
-      warehouse: tasty_bytes_dbt_wh
+      role: 'RF_BENCHMARK_TESTEUR'
+      database: 'DBT_DB'
+      schema: 'DEMO_PROD'
+      warehouse: 'DEFAULT_WH'
