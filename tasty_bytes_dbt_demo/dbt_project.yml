@@ -3,6 +3,8 @@ name: tasty_bytes
 version: "1.0"
 config-version: 2
 profile: tasty_bytes
+flags:
+  enable_iceberg_materializations: True
 
 ## Sources
 model-paths: [models]
