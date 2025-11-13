@@ -19,3 +19,8 @@ VALUES
 
 
 select * from DATAFACTORY_DB.DEV.iceberg_Inventory;
+
+
+CREATE DBT PROJECT "DBT_DB"."DEMO_INT"."TESTBGA" FROM $$snow://workspace/USER$BGARDES.PUBLIC.TEST_DBT/versions/live/tasty_bytes_dbt_demo$$ DEFAULT_TARGET = 'dev';
+
+CREATE WORKSPACE DBT_DB.DEMO_INT.MYWSPACE FROM 'snow://workspace/USER$BGARDES.PUBLIC."TEST_DBT"/versions/live/tasty_bytes_dbt_demo';
