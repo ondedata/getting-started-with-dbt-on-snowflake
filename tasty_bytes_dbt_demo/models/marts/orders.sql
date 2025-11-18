@@ -1,3 +1,10 @@
+{{
+    config(
+        materialized='incremental',
+        incremental_strategy='delete+insert',
+        unique_key=['order_id','line_number']
+    )
+}}
 SELECT 
     oh.order_id,
     oh.truck_id,
@@ -44,3 +51,6 @@ JOIN {{ ref('raw_pos_location') }} l
     ON oh.location_id = l.location_id
 LEFT JOIN {{ ref('raw_customer_customer_loyalty') }} cl
     ON oh.customer_id = cl.customer_id
+{% if is_incremental() %}
+    where order_ts >= dateadd(day,-3, current_date)
+{% endif %}
