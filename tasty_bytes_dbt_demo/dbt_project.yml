@@ -6,6 +6,7 @@ profile: tasty_bytes
 flags:
   enable_iceberg_materializations: True
 
+
 ## Sources
 model-paths: [models]
 analysis-paths: [analysis]
